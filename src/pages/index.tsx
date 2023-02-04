@@ -20,8 +20,27 @@ const Home: NextPage = () => {
       <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c]">
         <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16 ">
           <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
-            Create <span className="text-[hsl(280,100%,70%)]">T3</span> App
+            Town <span className="text-[hsl(280,100%,70%)]">Star</span>
           </h1>
+          <h4 className="text-white">
+            is a city-building simulation game developed by Gala Games.
+          </h4>
+          <p className="text-white">
+            The objective of the game is to build and manage your own virtual
+            city, starting from a small town and expanding it into a bustling
+            metropolis. Players have access to various tools and resources to
+            construct buildings, produce goods, trade with other players, and
+            more. There are also various challenges and obstacles to overcome as
+            you grow your city, such as natural disasters, resource shortages,
+            and other player interactions. In addition to the city-building
+            aspect, Town Star also has elements of strategy and competition, as
+            players compete with each other to be the best and most successful
+            city-builder. This adds a social and multiplayer aspect to the game,
+            allowing players to interact with each other and form alliances or
+            engage in conflicts. Overall, Town Star offers a fun and engaging
+            experience for players who enjoy city-building simulation games, as
+            well as those who enjoy multiplayer competition and strategy.
+          </p>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
             <Link
               className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
