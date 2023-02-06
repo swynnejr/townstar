@@ -1,4 +1,5 @@
 import { type NextPage } from "next";
+import Image from "next/image";
 import Head from "next/head";
 import Link from "next/link";
 import { signIn, signOut, useSession } from "next-auth/react";
@@ -18,13 +19,46 @@ const Home: NextPage = () => {
       </Head>
       <Navbar />
       <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c]">
-        <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16 ">
-          <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
-            Town <span className="text-[hsl(280,100%,70%)]">Star</span>
-          </h1>
-          <h4 className="text-white">
-            is a city-building simulation game developed by Gala Games.
-          </h4>
+        <div className="container flex max-w-[80%] flex-col items-center justify-center gap-12 px-4 py-16">
+          <div className="flex">
+            <div>
+              <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
+                Town <span className="text-[hsl(280,100%,70%)]">Star</span>
+              </h1>
+              <h4 className="text-white">
+                is a city-building simulation game developed by Gala Games.
+              </h4>
+              <div className="mt-5">
+                <Link
+                  className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 object-contain p-4 text-white hover:bg-white/20"
+                  href="https://games.gala.com/games/town-star"
+                  target="_blank"
+                >
+                  <h3 className="text-2xl font-bold">Want to Play? →</h3>
+                  <div className="text-lg">
+                    Visit the Gala Games website to play!
+                  </div>
+                </Link>
+                {/* <Link
+                  className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
+                  href="https://create.t3.gg/en/introduction"
+                  target="_blank"
+                >
+                  <h3 className="text-2xl font-bold">Documentation →</h3>
+                  <div className="text-lg">
+                    Learn more about Create T3 App, the libraries it uses, and
+                    how to deploy it.
+                  </div>
+                </Link> */}
+              </div>
+            </div>
+            <Image
+              src="/farmwithwindmill.png"
+              width={750}
+              height={750}
+              alt="Farm on a floating island"
+            />
+          </div>
           <p className="text-white">
             The objective of the game is to build and manage your own virtual
             city, starting from a small town and expanding it into a bustling
@@ -41,30 +75,6 @@ const Home: NextPage = () => {
             experience for players who enjoy city-building simulation games, as
             well as those who enjoy multiplayer competition and strategy.
           </p>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
-            <Link
-              className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
-              href="https://create.t3.gg/en/usage/first-steps"
-              target="_blank"
-            >
-              <h3 className="text-2xl font-bold">First Steps →</h3>
-              <div className="text-lg">
-                Just the basics - Everything you need to know to set up your
-                database and authentication.
-              </div>
-            </Link>
-            <Link
-              className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
-              href="https://create.t3.gg/en/introduction"
-              target="_blank"
-            >
-              <h3 className="text-2xl font-bold">Documentation →</h3>
-              <div className="text-lg">
-                Learn more about Create T3 App, the libraries it uses, and how
-                to deploy it.
-              </div>
-            </Link>
-          </div>
           <div className="flex flex-col items-center gap-2">
             <p className="text-2xl text-white">
               {hello.data ? hello.data.greeting : "Loading tRPC query..."}
